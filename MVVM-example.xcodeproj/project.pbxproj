@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		74B1515728FC8B02008058E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1515628FC8B02008058E1 /* AppDelegate.swift */; };
 		74B1515928FC8B02008058E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1515828FC8B02008058E1 /* SceneDelegate.swift */; };
-		74B1515B28FC8B02008058E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1515A28FC8B02008058E1 /* ViewController.swift */; };
+		74B1515B28FC8B02008058E1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1515A28FC8B02008058E1 /* WelcomeViewController.swift */; };
 		74B1516028FC8B03008058E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74B1515F28FC8B03008058E1 /* Assets.xcassets */; };
 		74B1516328FC8B03008058E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B1516128FC8B03008058E1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 		74B1515328FC8B02008058E1 /* MVVM-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B1515628FC8B02008058E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B1515828FC8B02008058E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		74B1515A28FC8B02008058E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74B1515A28FC8B02008058E1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		74B1515F28FC8B03008058E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74B1516228FC8B03008058E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74B1516428FC8B03008058E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +35,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		748F08A228FD81C300F79413 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				74B1515628FC8B02008058E1 /* AppDelegate.swift */,
+				74B1515828FC8B02008058E1 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		748F08A328FD81D900F79413 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				74B1515F28FC8B03008058E1 /* Assets.xcassets */,
+				74B1516128FC8B03008058E1 /* LaunchScreen.storyboard */,
+				74B1516428FC8B03008058E1 /* Info.plist */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		748F08A428FD820D00F79413 /* WelcomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				748F08A628FD824A00F79413 /* Model */,
+				748F08A528FD824100F79413 /* View */,
+				748F08A728FD824E00F79413 /* ViewModel */,
+			);
+			path = WelcomeModule;
+			sourceTree = "<group>";
+		};
+		748F08A528FD824100F79413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74B1515A28FC8B02008058E1 /* WelcomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		748F08A628FD824A00F79413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		748F08A728FD824E00F79413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		74B1514A28FC8B02008058E1 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +105,9 @@
 		74B1515528FC8B02008058E1 /* MVVM-example */ = {
 			isa = PBXGroup;
 			children = (
-				74B1515628FC8B02008058E1 /* AppDelegate.swift */,
-				74B1515828FC8B02008058E1 /* SceneDelegate.swift */,
-				74B1515A28FC8B02008058E1 /* ViewController.swift */,
-				74B1515F28FC8B03008058E1 /* Assets.xcassets */,
-				74B1516128FC8B03008058E1 /* LaunchScreen.storyboard */,
-				74B1516428FC8B03008058E1 /* Info.plist */,
+				748F08A228FD81C300F79413 /* App */,
+				748F08A428FD820D00F79413 /* WelcomeModule */,
+				748F08A328FD81D900F79413 /* Resourses */,
 			);
 			path = "MVVM-example";
 			sourceTree = "<group>";
@@ -134,7 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74B1515B28FC8B02008058E1 /* ViewController.swift in Sources */,
+				74B1515B28FC8B02008058E1 /* WelcomeViewController.swift in Sources */,
 				74B1515728FC8B02008058E1 /* AppDelegate.swift in Sources */,
 				74B1515928FC8B02008058E1 /* SceneDelegate.swift in Sources */,
 			);
@@ -277,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GRJL322676;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MVVM-example/Info.plist";
+				INFOPLIST_FILE = "MVVM-example/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -307,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GRJL322676;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MVVM-example/Info.plist";
+				INFOPLIST_FILE = "MVVM-example/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
