@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Welcome"
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 30)
+        label.font = .systemFont(ofSize: Constants.defaultSize30)
         return label
     }()
     
@@ -23,7 +23,7 @@ class WelcomeViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Login"
-        label.font = .systemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: Constants.defaultSize20)
         return label
     }()
     
@@ -38,7 +38,7 @@ class WelcomeViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Password"
-        label.font = .systemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: Constants.defaultSize20)
         return label
     }()
     
@@ -55,7 +55,7 @@ class WelcomeViewController: UIViewController {
         button.setTitle("Login", for: .normal)
         button.backgroundColor = .tintColor
         button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5
+        button.layer.cornerRadius = Constants.cornerRadius5
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -69,10 +69,10 @@ class WelcomeViewController: UIViewController {
                                                       loginButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.setCustomSpacing(50, after: mainLabel)
-        stackView.setCustomSpacing(20, after: loginTextField)
-        stackView.setCustomSpacing(20, after: passwordTextField)
+        stackView.spacing = Constants.customSpacing10
+        stackView.setCustomSpacing(Constants.customSpacing50, after: mainLabel)
+        stackView.setCustomSpacing(Constants.customSpacing20, after: loginTextField)
+        stackView.setCustomSpacing(Constants.customSpacing20, after: passwordTextField)
         return stackView
     }()
     
@@ -91,10 +91,10 @@ class WelcomeViewController: UIViewController {
     }
     
     private func setConstraints() {
-        view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 0,
-                                                                leading: 20,
-                                                                bottom: 0,
-                                                                trailing: 20)
+        view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: .zero,
+                                                                leading: Constants.customSpacing20,
+                                                                bottom: .zero,
+                                                                trailing: Constants.customSpacing20)
         let margins = view.layoutMarginsGuide
         mainStackView.frame = view.layoutMarginsGuide.layoutFrame
         NSLayoutConstraint.activate([
