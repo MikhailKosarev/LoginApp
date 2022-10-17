@@ -19,35 +19,10 @@ class WelcomeViewController: UIViewController {
         return label
     }()
     
-    private let loginLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Login"
-        label.font = .systemFont(ofSize: Constants.defaultSize20)
-        return label
-    }()
-    
-    private let loginTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .roundedRect
-        return textField
-    }()
-    
-    private let passwordLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Password"
-        label.font = .systemFont(ofSize: Constants.defaultSize20)
-        return label
-    }()
-    
-    private let passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .roundedRect
-        return textField
-    }()
+    private let loginLabel = UILabel.makeDefaultLabel20(text: "Login")
+    private let loginTextField = UITextField.makeDefaultTextField()
+    private let passwordLabel = UILabel.makeDefaultLabel20(text: "Password")
+    private let passwordTextField = UITextField.makeDefaultTextField()
     
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
@@ -85,27 +60,32 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - Private methods
     private func setupView() {
-//        view.addSubview(mainLabel)
         view.backgroundColor = .white
         view.addSubview(mainStackView)
     }
-    
+
+    @objc private func loginButtonTapped() {
+        print(#function)
+    }
+}
+
+// MARK: - setConstraints
+extension WelcomeViewController {
     private func setConstraints() {
+        // change view margins
         view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: .zero,
                                                                 leading: Constants.customSpacing20,
                                                                 bottom: .zero,
                                                                 trailing: Constants.customSpacing20)
         let margins = view.layoutMarginsGuide
         mainStackView.frame = view.layoutMarginsGuide.layoutFrame
+        
+        // set constraints
         NSLayoutConstraint.activate([
             mainStackView.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
             mainStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
         ])
-    }
-    
-    @objc private func loginButtonTapped() {
-        print(#function)
     }
 }
 
