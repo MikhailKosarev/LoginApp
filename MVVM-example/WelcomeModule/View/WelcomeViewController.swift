@@ -107,7 +107,6 @@ extension WelcomeViewController {
                                                                 bottom: .zero,
                                                                 trailing: Constants.customSpacing20)
         let margins = view.layoutMarginsGuide
-        mainStackView.frame = view.layoutMarginsGuide.layoutFrame
         
         // set constraints
         NSLayoutConstraint.activate([
@@ -122,7 +121,7 @@ extension WelcomeViewController {
 #if DEBUG
 import SwiftUI
 
-struct CurrentWeatherViewController_Preview: PreviewProvider {
+struct WelcomeViewController_Preview: PreviewProvider {
     static var previews: some View {
         WelcomeViewController().showPreview()
     }
