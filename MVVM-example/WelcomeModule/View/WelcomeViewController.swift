@@ -60,6 +60,10 @@ class WelcomeViewController: UIViewController {
         setupView()
         setConstraints()
         setupBinders()
+        
+        // hide keyboard when tap somewhere else
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+         view.addGestureRecognizer(tapGesture)
     }
     
     // MARK: - Private methods
@@ -82,9 +86,13 @@ class WelcomeViewController: UIViewController {
     }
 
     @objc private func loginButtonTapped() {
+        // hide the keyboard
+        view.endEditing(true)
         // check if the fields filled
         guard let login = loginTextField.text,
-              let password = passwordTextField.text else {
+              !login.isEmpty,
+              let password = passwordTextField.text,
+              !password.isEmpty else {
             print("fill login and password")
             return
         }
@@ -106,7 +114,7 @@ extension WelcomeViewController {
         
         // set constraints
         NSLayoutConstraint.activate([
-            mainStackView.centerYAnchor.constraint(equalTo: margins.centerYAnchor),
+            mainStackView.centerYAnchor.constraint(equalTo: margins.centerYAnchor, constant: -Constants.customSpacing50),
             mainStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
         ])
