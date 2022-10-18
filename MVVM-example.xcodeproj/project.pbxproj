@@ -16,6 +16,8 @@
 		748F08B728FE9CE200F79413 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F08B628FE9CE200F79413 /* WelcomeViewModel.swift */; };
 		748F08B928FEA40100F79413 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F08B828FEA40100F79413 /* LoginResult.swift */; };
 		748F08BB28FEAAE700F79413 /* UIAlertController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F08BA28FEAAE700F79413 /* UIAlertController + Extensions.swift */; };
+		748F08C228FEADC500F79413 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F08C128FEADC500F79413 /* HomeViewController.swift */; };
+		748F08C428FEAFE500F79413 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748F08C328FEAFE500F79413 /* HomeViewModel.swift */; };
 		74B1515728FC8B02008058E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1515628FC8B02008058E1 /* AppDelegate.swift */; };
 		74B1515928FC8B02008058E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1515828FC8B02008058E1 /* SceneDelegate.swift */; };
 		74B1515B28FC8B02008058E1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1515A28FC8B02008058E1 /* WelcomeViewController.swift */; };
@@ -33,6 +35,8 @@
 		748F08B628FE9CE200F79413 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		748F08B828FEA40100F79413 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		748F08BA28FEAAE700F79413 /* UIAlertController + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extensions.swift"; sourceTree = "<group>"; };
+		748F08C128FEADC500F79413 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		748F08C328FEAFE500F79413 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		74B1515328FC8B02008058E1 /* MVVM-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B1515628FC8B02008058E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B1515828FC8B02008058E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,39 @@
 			path = ObservableObject;
 			sourceTree = "<group>";
 		};
+		748F08BC28FEAD3B00F79413 /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				748F08BD28FEAD4700F79413 /* Model */,
+				748F08BE28FEAD4F00F79413 /* View */,
+				748F08C028FEAD5D00F79413 /* ViewModel */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		748F08BD28FEAD4700F79413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		748F08BE28FEAD4F00F79413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				748F08C128FEADC500F79413 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		748F08C028FEAD5D00F79413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				748F08C328FEAFE500F79413 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		74B1514A28FC8B02008058E1 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +185,7 @@
 			children = (
 				748F08A228FD81C300F79413 /* App */,
 				748F08A428FD820D00F79413 /* WelcomeModule */,
+				748F08BC28FEAD3B00F79413 /* HomeModule */,
 				748F08B328FE99A100F79413 /* ObservableObject */,
 				748F08A828FD82EF00F79413 /* Extensions */,
 				748F08A328FD81D900F79413 /* Resourses */,
@@ -234,8 +272,10 @@
 				74B1515728FC8B02008058E1 /* AppDelegate.swift in Sources */,
 				748F08B528FE9B2000F79413 /* User.swift in Sources */,
 				748F08B228FE978200F79413 /* ObservableObject.swift in Sources */,
+				748F08C428FEAFE500F79413 /* HomeViewModel.swift in Sources */,
 				748F08AA28FD82FD00F79413 /* UIViewController + Preview.swift in Sources */,
 				748F08B928FEA40100F79413 /* LoginResult.swift in Sources */,
+				748F08C228FEADC500F79413 /* HomeViewController.swift in Sources */,
 				74B1515928FC8B02008058E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

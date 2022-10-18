@@ -12,6 +12,7 @@ struct User {
     let password: String
 }
 
+// example of user
 extension User {
     static var defaultLogin = User(login: "default", password: "qwerty")
 }

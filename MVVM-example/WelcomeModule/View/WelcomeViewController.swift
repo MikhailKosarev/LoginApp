@@ -10,15 +10,7 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     // MARK: - Declare UI elements
-    private let mainLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Welcome"
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: Constants.defaultSize30)
-        return label
-    }()
-    
+    private let mainLabel = UILabel.makeDefaultMainLabel()
     private let loginLabel = UILabel.makeDefaultLabel20(text: "Login")
     private let loginTextField = UITextField.makeDefaultTextField()
     private let passwordLabel = UILabel.makeDefaultLabel20(text: "Password")
@@ -76,11 +68,14 @@ class WelcomeViewController: UIViewController {
         welcomeViewModel.error.bind{ [weak self] result in
             switch result {
             case .success:
-                print("success")
+                // show HomeViewController with welcome message
+                let homeViewController = HomeViewController()
+                homeViewController.modalPresentationStyle = .formSheet
+                self?.present(homeViewController, animated: true)
             case .error:
                 self?.showAlert(title: "Error", message: "Invalid login/password")
             case .none:
-                print("no result")
+                return
             }
         }
     }
@@ -115,7 +110,6 @@ extension WelcomeViewController {
                                                                 bottom: .zero,
                                                                 trailing: Constants.customSpacing20)
         let margins = view.layoutMarginsGuide
-        mainStackView.frame = view.layoutMarginsGuide.layoutFrame
         
         // set constraints
         NSLayoutConstraint.activate([
@@ -130,7 +124,7 @@ extension WelcomeViewController {
 #if DEBUG
 import SwiftUI
 
-struct CurrentWeatherViewController_Preview: PreviewProvider {
+struct WelcomeViewController_Preview: PreviewProvider {
     static var previews: some View {
         WelcomeViewController().showPreview()
     }

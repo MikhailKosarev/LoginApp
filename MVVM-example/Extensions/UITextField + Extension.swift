@@ -14,6 +14,7 @@ extension UITextField {
         textField.borderStyle = .roundedRect
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
+        textField.clearButtonMode = .always
         return textField
     }
 }

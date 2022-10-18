@@ -7,6 +7,7 @@
 
 import Foundation
 
+// for handling login result
 enum LoginResult {
     case success
     case error
