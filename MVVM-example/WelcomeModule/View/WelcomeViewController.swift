@@ -68,6 +68,7 @@ class WelcomeViewController: UIViewController {
         welcomeViewModel.error.bind{ [weak self] result in
             switch result {
             case .success:
+                // show HomeViewController with welcome message
                 let homeViewController = HomeViewController()
                 homeViewController.modalPresentationStyle = .formSheet
                 self?.present(homeViewController, animated: true)

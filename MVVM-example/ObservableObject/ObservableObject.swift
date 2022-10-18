@@ -21,7 +21,7 @@ final class ObservableObject<T> {
     }
     
     func bind(_ listener: @escaping(T) -> Void) {
-        listener(value) // do we need this line?
+        listener(value)
         self.listener = listener
     }
 }
