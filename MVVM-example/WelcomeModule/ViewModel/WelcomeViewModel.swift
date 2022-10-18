@@ -8,11 +8,13 @@
 import Foundation
 
 final class WelcomeViewModel {
+    var error: ObservableObject<LoginResult?> = ObservableObject(nil)
+    
     func login(login: String, password: String) {
         if login != User.defaultLogin.login || password != User.defaultLogin.password {
-            print("error")
+            self.error.value = LoginResult.error
         } else {
-            print("ok")
+            self.error.value = LoginResult.success
         }
     }
 }
