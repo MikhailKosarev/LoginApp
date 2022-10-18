@@ -9,11 +9,9 @@ import Foundation
 
 struct User {
     let login: String
-    let passwords: String
+    let password: String
 }
 
 extension User {
-    static var logins = [
-        User(login: "default", passwords: "qwerty")
-    ]
+    static var defaultLogin = User(login: "default", password: "qwerty")
 }

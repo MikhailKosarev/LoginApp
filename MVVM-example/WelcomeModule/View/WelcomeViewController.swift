@@ -51,11 +51,15 @@ class WelcomeViewController: UIViewController {
         return stackView
     }()
     
+    // MARK: - Private properties
+    private let welcomeViewModel = WelcomeViewModel()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setConstraints()
+        setupBinders()
     }
     
     // MARK: - Private methods
@@ -63,9 +67,29 @@ class WelcomeViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(mainStackView)
     }
+    
+    private func setupBinders() {
+        welcomeViewModel.error.bind{ result in
+            switch result {
+            case .success:
+                print("success")
+            case .error:
+                print("error")
+            case .none:
+                print("no result")
+            }
+        }
+    }
 
     @objc private func loginButtonTapped() {
-        print(#function)
+        // check if the fields filled
+        guard let login = loginTextField.text,
+              let password = passwordTextField.text else {
+            print("fill login and password")
+            return
+        }
+        
+        welcomeViewModel.login(login: login, password: password)
     }
 }
 
