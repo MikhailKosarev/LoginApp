@@ -10,15 +10,7 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     // MARK: - Declare UI elements
-    private let mainLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Welcome"
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: Constants.defaultSize30)
-        return label
-    }()
-    
+    private let mainLabel = UILabel.makeDefaultMainLabel()
     private let loginLabel = UILabel.makeDefaultLabel20(text: "Login")
     private let loginTextField = UITextField.makeDefaultTextField()
     private let passwordLabel = UILabel.makeDefaultLabel20(text: "Password")
