@@ -56,6 +56,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setConstraints()
+        setupBinders()
     }
     
     // MARK: - Private methods
@@ -63,6 +64,8 @@ class WelcomeViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(mainStackView)
     }
+    
+    private func setupBinders()
 
     @objc private func loginButtonTapped() {
         print(#function)
