@@ -73,12 +73,12 @@ class WelcomeViewController: UIViewController {
     }
     
     private func setupBinders() {
-        welcomeViewModel.error.bind{ result in
+        welcomeViewModel.error.bind{ [weak self] result in
             switch result {
             case .success:
                 print("success")
             case .error:
-                print("error")
+                self?.showAlert(title: "Error", message: "Invalid login/password")
             case .none:
                 print("no result")
             }
@@ -93,11 +93,16 @@ class WelcomeViewController: UIViewController {
               !login.isEmpty,
               let password = passwordTextField.text,
               !password.isEmpty else {
-            print("fill login and password")
+            showAlert(title: "Error", message: "Fill login and password")
             return
         }
         
         welcomeViewModel.login(login: login, password: password)
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alertOk = UIAlertController.alertOk(title: title, message: message)
+        present(alertOk, animated: true)
     }
 }
 
