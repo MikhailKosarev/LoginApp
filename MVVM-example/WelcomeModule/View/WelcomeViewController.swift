@@ -68,11 +68,13 @@ class WelcomeViewController: UIViewController {
         welcomeViewModel.error.bind{ [weak self] result in
             switch result {
             case .success:
-                print("success")
+                let homeViewController = HomeViewController()
+                homeViewController.modalPresentationStyle = .formSheet
+                self?.present(homeViewController, animated: true)
             case .error:
                 self?.showAlert(title: "Error", message: "Invalid login/password")
             case .none:
-                print("no result")
+                return
             }
         }
     }

@@ -12,17 +12,28 @@ final class HomeViewController: UIViewController {
     // MARK: - Declare UI elements
     private let mainWelcomeLabel = UILabel.makeDefaultMainLabel()
     
+    // MARK: - Private properties
+    private let homeViewModel = HomeViewModel()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupBinders()
         setConstraints()
+        homeViewModel.getLoggedInUser()
     }
     
     // MARK: - Private methods
     private func setupView() {
         view.backgroundColor = .white
         view.addSubview(mainWelcomeLabel)
+    }
+    
+    private func setupBinders() {
+        homeViewModel.welcomeMessage.bind() { [weak self] welcomeMessage in
+            self?.mainWelcomeLabel.text = welcomeMessage
+        }
     }
     
     private func setConstraints() {
