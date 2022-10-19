@@ -14,5 +14,5 @@ struct User {
 
 // example of user
 extension User {
-    static var defaultLogin = User(login: "default", password: "qwerty")
+    static var defaultLogin = User(login: "user", password: "qwerty")
 }
