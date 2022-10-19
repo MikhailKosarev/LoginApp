@@ -1,4 +1,4 @@
-# LoginApp-MVVM
+# LoginApp
 ## Description
 This is a simple login form app just to learn the **MMVM** (Model-View-ViewModel) architecture better. 100% programmatic UI, no storyboards.
 Technology stack: 
