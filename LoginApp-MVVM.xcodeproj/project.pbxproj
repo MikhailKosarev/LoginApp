@@ -37,7 +37,7 @@
 		748F08BA28FEAAE700F79413 /* UIAlertController + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extensions.swift"; sourceTree = "<group>"; };
 		748F08C128FEADC500F79413 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		748F08C328FEAFE500F79413 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		74B1515328FC8B02008058E1 /* MVVM-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B1515328FC8B02008058E1 /* LoginApp-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoginApp-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B1515628FC8B02008058E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B1515828FC8B02008058E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		74B1515A28FC8B02008058E1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		74B1514A28FC8B02008058E1 = {
 			isa = PBXGroup;
 			children = (
-				74B1515528FC8B02008058E1 /* MVVM-example */,
+				74B1515528FC8B02008058E1 /* LoginApp-MVVM */,
 				74B1515428FC8B02008058E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -175,12 +175,12 @@
 		74B1515428FC8B02008058E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74B1515328FC8B02008058E1 /* MVVM-example.app */,
+				74B1515328FC8B02008058E1 /* LoginApp-MVVM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		74B1515528FC8B02008058E1 /* MVVM-example */ = {
+		74B1515528FC8B02008058E1 /* LoginApp-MVVM */ = {
 			isa = PBXGroup;
 			children = (
 				748F08A228FD81C300F79413 /* App */,
@@ -190,15 +190,15 @@
 				748F08A828FD82EF00F79413 /* Extensions */,
 				748F08A328FD81D900F79413 /* Resourses */,
 			);
-			path = "MVVM-example";
+			path = "LoginApp-MVVM";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74B1515228FC8B02008058E1 /* MVVM-example */ = {
+		74B1515228FC8B02008058E1 /* LoginApp-MVVM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74B1516728FC8B03008058E1 /* Build configuration list for PBXNativeTarget "MVVM-example" */;
+			buildConfigurationList = 74B1516728FC8B03008058E1 /* Build configuration list for PBXNativeTarget "LoginApp-MVVM" */;
 			buildPhases = (
 				74B1514F28FC8B02008058E1 /* Sources */,
 				74B1515028FC8B02008058E1 /* Frameworks */,
@@ -208,9 +208,9 @@
 			);
 			dependencies = (
 			);
-			name = "MVVM-example";
+			name = "LoginApp-MVVM";
 			productName = "MVVM-example";
-			productReference = 74B1515328FC8B02008058E1 /* MVVM-example.app */;
+			productReference = 74B1515328FC8B02008058E1 /* LoginApp-MVVM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -228,7 +228,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74B1514E28FC8B02008058E1 /* Build configuration list for PBXProject "MVVM-example" */;
+			buildConfigurationList = 74B1514E28FC8B02008058E1 /* Build configuration list for PBXProject "LoginApp-MVVM" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -241,7 +241,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74B1515228FC8B02008058E1 /* MVVM-example */,
+				74B1515228FC8B02008058E1 /* LoginApp-MVVM */,
 			);
 		};
 /* End PBXProject section */
@@ -417,7 +417,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GRJL322676;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MVVM-example/Resourses/Info.plist";
+				INFOPLIST_FILE = "LoginApp-MVVM/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -427,7 +427,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "MikhailKosarev.MVVM-example";
+				PRODUCT_BUNDLE_IDENTIFIER = "MikhailKosarev.LoginApp-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -447,7 +447,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GRJL322676;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MVVM-example/Resourses/Info.plist";
+				INFOPLIST_FILE = "LoginApp-MVVM/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -457,7 +457,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "MikhailKosarev.MVVM-example";
+				PRODUCT_BUNDLE_IDENTIFIER = "MikhailKosarev.LoginApp-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -471,7 +471,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74B1514E28FC8B02008058E1 /* Build configuration list for PBXProject "MVVM-example" */ = {
+		74B1514E28FC8B02008058E1 /* Build configuration list for PBXProject "LoginApp-MVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74B1516528FC8B03008058E1 /* Debug */,
@@ -480,7 +480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74B1516728FC8B03008058E1 /* Build configuration list for PBXNativeTarget "MVVM-example" */ = {
+		74B1516728FC8B03008058E1 /* Build configuration list for PBXNativeTarget "LoginApp-MVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74B1516828FC8B03008058E1 /* Debug */,
